@@ -19,7 +19,7 @@ supabase-reset-database: ## reset (and clear!) the database
 	npx supabase db reset
 
 start-app: ## start the app locally
-	npm run dev
+	nohup npm run dev -- --host > vite.log 2>&1 &
 
 start: start-supabase start-app ## start the stack locally
 
